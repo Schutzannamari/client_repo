@@ -1,6 +1,7 @@
 import React from "react";
 import {Navigate, Route, Routes} from "react-router-dom";
 import Game from "../../views/Game";
+import ProfilePage from "../../views/ProfilePage";
 import PropTypes from "prop-types";
 
 const GameRouter = () => {
@@ -11,6 +12,8 @@ const GameRouter = () => {
         <Route path="" element={<Game />} />
 
         <Route path="dashboard" element={<Game />} />
+
+        <Route path="/profile/:userid" element={<ProfilePage />} />
 
         <Route path="*" element={<Navigate to="dashboard" replace />} />
 
